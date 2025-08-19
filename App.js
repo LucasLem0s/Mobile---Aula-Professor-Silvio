@@ -6,6 +6,7 @@ const DATA = [
   {
     id: '1',
     nome: 'Harry Potter',
+    casa: 'Casa: Grifinoria',
     imagem: require('./assets/harry.png'),
   },
   {
@@ -29,13 +30,14 @@ const DATA = [
     imagem: require('./assets/hagrid.png'), 
 
   }
-];
+];  
 
 export default function App() {
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <Image source={item.imagem} style={styles.imagem} />
       <Text style={styles.texto}>{item.nome}</Text>
+      <Text style={styles.texto}>{item.casa}</Text>
     </View>
   );
 
@@ -72,6 +74,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     alignItems: 'center',
     borderRadius: 10, 
+    color: 'white',
   },
   texto: {
     fontSize: 20,
